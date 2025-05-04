@@ -7,11 +7,12 @@ metadata:
 spec:
   replicas: 3 # make 3 Pods
   selector:
-    matchLabels:
+    matchLabels: # ReplicaSetが管理すべきPodを識別するための条件
       app: httpserver # templateのlabelsと一致している必要がある
+      # 一致しないとReplicaSetは「管理すべきPodが見つからない」と判断し、新しいPodを無限に作成しようとします
   template:
     metadata:
-      labels:
+      labels: # 新しく作成されるPodに付与されるラベル
         app: httpserver
     spec:
       containers:
