@@ -5,10 +5,10 @@ metadata:
   labels:
     app: httpserver
 spec:
-  replicas: 3
+  replicas: 3 # make 3 Pods
   selector:
     matchLabels:
-      app: httpserver
+      app: httpserver # templateのlabelsと一致している必要がある
   template:
     metadata:
       labels:
