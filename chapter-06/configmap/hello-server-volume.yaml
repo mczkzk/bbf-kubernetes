@@ -31,5 +31,6 @@ kind: ConfigMap
 metadata:
   name: hello-server-configmap
 data:
+  # ファイル名は myconfig.txt にする必要がありそう
   myconfig.txt: |-
     I am hungry.
