@@ -18,16 +18,16 @@ spec:
       containers:
       - name: hello-server
         image: blux2/hello-server:1.4
-        env:
+        env: # コンテナの環境変数を設定する
         - name: PORT
           valueFrom:
             configMapKeyRef:
-              name: hello-server-configmap
-              key: PORT
+              name: hello-server-configmap # ConfigMapの名前
+              key: PORT # ConfigMapのキー
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: hello-server-configmap
 data:
-  PORT: "8081"
+  PORT: "5555"
