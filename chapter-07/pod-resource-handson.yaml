@@ -9,6 +9,7 @@ spec:
   - name: hello-server
     image: blux2/hello-server:1.6
     resources:
+      # requests と limits が両方とも指定されていて、かつ値が同じ -> Guaranteed
       requests:
         memory: "64Mi"
         cpu: "10m"
