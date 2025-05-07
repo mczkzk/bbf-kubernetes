@@ -31,13 +31,13 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: hello-server-hpa
 spec:
-  minReplicas: 1
-  maxReplicas: 10
+  minReplicas: 1 # 最低1Podは常に維持
+  maxReplicas: 10 # 最大10Podまでスケールアップ
   metrics:
   - resource:
       name: cpu
       target:
-        averageUtilization: 50
+        averageUtilization: 50 # CPU使用率50%を目安にスケールアップ
         type: Utilization
     type: Resource
   scaleTargetRef:
