@@ -1,3 +1,4 @@
+# PodDisruptionBudget定義（本番環境用のみ）
 apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:

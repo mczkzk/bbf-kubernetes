@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - ../../base
   - pdb.yaml
-patches:
+patches: # baseの上書き
   - path: deployment.yaml
